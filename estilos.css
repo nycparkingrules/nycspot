@@ -1,0 +1,58 @@
+body{ text-align: center; margin: 0 auto; background: #383a3e; color : #ffffff;}
+#mensaje1{ color: #7c897e; font-size: 20px; font-weight: bold; font-family: helvetica}
+#mensaje2{ color: yellow; font-size: 20px; font-weight: bold; font-family: helvetica}
+h3{ font-family: helvetica; margin-top: 10px; margin-bottom: 10px;}
+#foot{ font-family: helvetica; margin-top: 30px;}
+#activ{ width:100%; color: #81F949; font-size: 14px; font-family: helvetica; padding:5px, text-align:center}
+#btn1{ width:90%; border-radius: 10px; padding: 12px; font-size: 15px; font-weight: bold; }
+#m{  font-size: 11px; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+#message-bar {
+  width: 100%;
+     margin-top: 24px;
+    padding: 10px;
+  text-align: center;
+  font-family: helvetica;
+  justify-content: center;
+}
+#notification {
+  color: #fff;
+    text-align: center;
+    /* padding-top: 21px; */
+    height: auto;
+    font-family: helvetica;
+}
+.container {
+  width: 100%;
+  padding: 10px;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+textarea {
+  font-size: 16px;
+  margin-bottom: 30px;
+  padding: 15px;
+  outline: none;
+}
+button {
+  width: 100%;
+  padding: 15px;
+  cursor: pointer;
+  background-color: green;
+  outline: none;
+  border: none;
+  color: #dcd7c9;
+  font-size: 16px;
+}
+button:hover {
+  background-color: #3f4e4f;
+}
+#map{     margin-top: 20px; }

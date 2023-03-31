@@ -1,0 +1,14 @@
+action_allowed: "Y"
+action_type: "PARK"
+addtl_info_next_period_parking_rule: null
+addtl_info_parking_rule: "No Parking From Oct. 31 Mon 07:00AM Until Oct. 31 Mon 06:00PM"
+check_days: "0"
+cross_streets: "8th Avenue <--> Broadway"
+input_metered_parking: "0"
+main_street: "West 52nd Street"
+meter_applies: "N"
+meter_duration: null
+parking_allowed: "Y"
+rule_simplified: "Free Parking Permitted From Oct. 30 Sun 12:00AM Until Oct. 31 Mon 07:00AM"
+side_of_st: "N"
+until_dt_min: "1475"
