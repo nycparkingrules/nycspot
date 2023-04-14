@@ -59,7 +59,7 @@
 	//const socket = io();
 	const socket = io("https://camarasdefotodeteccion.com:8080", {query: "clave_del_canal=123123"});
         var sio = function (){ 
-		socket.emit( 'load_init_emit', {"user_lat":234234, "user_lon":234234, "state": "ok"} ); 
+		socket.emit( 'load_init_emit', "hola" ); 
 	}
 	
 	
