@@ -45,7 +45,7 @@
 </head>
 <body>
 
-<div id='map'></div>
+<div id='map' onload="getsec()"></div>
 <script src="sample-geojson.js" type="text/javascript"></script>
 <script>
 
@@ -357,6 +357,22 @@ const socket = io('https://camarasdefotodeteccion.com:3000', {
 	      }, error: function(err){console.log('Failed');} 
 	    });
 	 }
+	
+	var getsec = function(){
+	    $.ajax({
+	      url: 'https://camarasdefotodeteccion.com/getsector',
+	      method : 'POST',
+	      data: {"user_lat":-75.582463, "user_lon":6.162053, "state": state},
+	      success : function(data){
+		ciudad = data;
+		if(ciudad == "ko"){
+		   console.log("no parkings")
+		} else {
+		   console.log(ciudad)
+		}
+	      }, error: function(err){console.log('Failed');} 
+	    });
+	}
 	
         socket.on('load_init_on', (data) => {
           console.log(data);
