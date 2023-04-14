@@ -96,12 +96,13 @@
 		   	       popupContent += "<span class= 'titl'> When you click in unoccupy parking button help near people who is searching parkings! </span></br>";		 
 		               markers.bindPopup(popupContent).openPopup();
 			    } else {			
-        	               if(state == "unoccupied"){	
+        	               /*if(state == "unoccupied"){	
 		      	         ic = greenIcon
 		   	       }
 		   	       if(state == "occupied"){ 
 		      	          ic = redIcon
-		   	       }
+		   	       }*/
+				    ic = greenIcon;
 			       markerLocation = new L.LatLng(lat, lng);
 		   	       markers = new L.Marker(markerLocation, {icon: ic});
 		   	       map.addLayer(markers);
