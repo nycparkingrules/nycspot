@@ -42,9 +42,9 @@
 	   }
    </style>
 </head>
-<body>
+<body onload="getsec()">
 
-<div id='map' onload="getsec()"></div>
+<div id='map'></div>
 <script src="sample-geojson.js" type="text/javascript"></script>
 <script>
 
@@ -335,7 +335,7 @@
 	}
 	
 	var fun2 = function(la, lo, state){
-	    socket.emit( 'load_init_emit', {"user_lat":la, "user_lon":lo, "state": state} ); 	
+	    //socket.emit( 'load_init_emit', {"user_lat":la, "user_lon":lo, "state": state} ); 	
 	    $.ajax({
 	      url: 'https://camarasdefotodeteccion.com/updateparking',
 	      method : 'POST',
