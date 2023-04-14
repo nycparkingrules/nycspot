@@ -356,7 +356,7 @@
 	    $.ajax({
 	      url: 'https://camarasdefotodeteccion.com/getsector',
 	      method : 'POST',
-	      data: {"user_lat":40.7344544, "user_lon":-73.8722772, "state": state},
+	      data: {"user_lat":40.7344544, "user_lon":-73.8722772, "state": "occupied"},
 	      success : function(data){ alert(data)
 		 ciudad = getSectorData;
 		 console.log(getSectorData)
