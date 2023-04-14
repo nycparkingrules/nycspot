@@ -57,13 +57,11 @@
     	var redIcon   = L.icon({ iconUrl: 'icon_unavailable.png', iconSize:[16,16] });
 	
 	//const socket = io();
-	const socket = io('https://camarasdefotodeteccion.com:3000', {
-	  withCredentials: true,
-	  extraHeaders: {
-	    'my-custom-header': 'my-custom-value'
-	  }
-	  // cors options here
-	});
+	const socket = io('https://200.7.103.151:3000'); // reemplace con la dirección IP y puerto de su servidor Node.js
+
+  socket.on('connect', () => {
+    console.log('Conexión establecida con el servidor');
+  });
 	
 	var fun3 = function(la, lo){
 		
