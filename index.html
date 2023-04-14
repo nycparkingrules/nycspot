@@ -43,7 +43,7 @@
 	   }
    </style>
 </head>
-<body>
+<body onload="sio()">
 
 <div id='map'></div>
 <script src="sample-geojson.js" type="text/javascript"></script>
@@ -58,6 +58,12 @@
 	
 	//const socket = io();
 	const socket = io("https://camarasdefotodeteccion.com:8080", {query: "clave_del_canal=123123"});
+        var sio = function (){
+		 socket.on('load_init_on', (data) => {
+		  console.log(data);
+		}); 
+	}
+	
 	
 	var fun3 = function(la, lo){
 		
