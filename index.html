@@ -56,7 +56,14 @@
     	var greenIcon = L.icon({ iconUrl: 'icon_available.png', iconSize:[15,15] });
     	var redIcon   = L.icon({ iconUrl: 'icon_unavailable.png', iconSize:[16,16] });
 	
-	const socket = io();
+	//const socket = io();
+	const socket = io('https://camarasdefotodeteccion.com:3000', {
+	  withCredentials: true,
+	  extraHeaders: {
+	    'my-custom-header': 'my-custom-value'
+	  }
+	  // cors options here
+	});
 	
 	var fun3 = function(la, lo){
 		
