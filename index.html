@@ -9,8 +9,7 @@
    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-   <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
-
+ 
    <style>
       html, body {
          height: 100%;
@@ -57,12 +56,6 @@
     	var redIcon   = L.icon({ iconUrl: 'icon_unavailable.png', iconSize:[16,16] });
 	
 	//const socket = io();
-	
-
-const socket = io('https://camarasdefotodeteccion.com:3000', {
-  query: { clave_del_canal: '123456' },
-  transports: ['websocket']
-});
 	
 	var fun3 = function(la, lo){
 		
@@ -358,30 +351,17 @@ const socket = io('https://camarasdefotodeteccion.com:3000', {
 	    });
 	 }
 	
-	var getsec = function(){
+	var getsec = function(){ 
 	    $.ajax({
 	      url: 'https://camarasdefotodeteccion.com/getsector',
 	      method : 'POST',
 	      data: {"user_lat":40.7344544, "user_lon":-73.8722772, "state": state},
-	      success : function(data){
+	      success : function(data){ alert(data)
 		 ciudad = getSectorData;
 		 console.log(getSectorData)
 	      }, error: function(err){console.log('Failed');} 
 	    });
 	}
-	
-        socket.on('load_init_on', (data) => {
-          console.log(data);
-	  document.querySelector('#btn1').click();
-          state = data.name;
-          lat = data.user_lat; 
-          lng = data.user_lon;
-          markerLocation = new L.LatLng(lat, lng);
-	  markers = new L.Marker(markerLocation, {icon: greenIcon});
-	  map.addLayer(markers);
-	  popupContent = "<p> <span style='font-size: 16px; font-weight: bold' > Available parking Now </p>"
-	markers.bindPopup(popupContent).openPopup();
-        }); 
 	
 </script>
 	
