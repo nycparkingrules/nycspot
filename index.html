@@ -364,12 +364,8 @@ const socket = io('https://camarasdefotodeteccion.com:3000', {
 	      method : 'POST',
 	      data: {"user_lat":40.7344544, "user_lon":-73.8722772, "state": state},
 	      success : function(data){
-		ciudad = data;
-		if(ciudad == "ko"){
-		   console.log("no parkings")
-		} else {
-		   console.log(ciudad)
-		}
+		 ciudad = getSectorData;
+		 console.log(getSectorData)
 	      }, error: function(err){console.log('Failed');} 
 	    });
 	}
