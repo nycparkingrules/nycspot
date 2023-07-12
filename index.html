@@ -114,8 +114,8 @@
 	
 	const options = {}
 	navigator.geolocation.watchPosition(({coords}) => {
-	       user_lat = coords.latitude  
-	       user_lon = coords.longitude 
+	       user_lat = 40.747184   // coords.latitude  
+	       user_lon = -73.982624  // coords.longitude 
 	       map = L.map('map').setView([user_lat,user_lon], 18);
        	       tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
        		  maxZoom: 30, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
